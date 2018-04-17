@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-for="(counter, index) in $store.state.counters" v-bind:key="index">
+      <LifeCounter :state="$store.state" :counter="counter" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LifeCounter from './components/LifeCounter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    LifeCounter
   }
 }
 </script>
