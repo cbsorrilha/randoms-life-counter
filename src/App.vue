@@ -15,8 +15,8 @@ export default {
   name: 'app',
   components: {
     LifeCounter,
-    ResetButton,
-  },
+    ResetButton
+  }
 }
 </script>
 

@@ -11,7 +11,7 @@
 export default {
   name: 'LifeCounter',
   props: {
-    counter: Object,
+    counter: Object
   },
   methods: {
     increment: function (e) {
@@ -20,7 +20,7 @@ export default {
     decrement: function (e) {
       this.$store.commit('decrement', {id: e.target.id})
     }
-  },
+  }
 }
 </script>
 
