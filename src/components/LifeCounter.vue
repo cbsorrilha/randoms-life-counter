@@ -12,8 +12,6 @@ export default {
   name: 'LifeCounter',
   props: {
     counter: Object,
-    state: Object,
-    id: String,
   },
   methods: {
     increment: function (e) {
