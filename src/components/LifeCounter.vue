@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="life-counter">
     <button :id="counter.id" v-on:click="increment">+</button>
     <h1>{{ counter.count }}</h1>
     <button :id="counter.id" v-on:click="decrement">-</button>
@@ -25,5 +25,16 @@ export default {
 </script>
 
 <style>
-
+  .life-counter {
+    border: solid black 1px;
+    border-radius: 8px;
+    background-color: #333;
+  }
+  .life-counter button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 32px;
+    width: 100%;
+  }
 </style>

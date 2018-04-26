@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <ResetButton />
-    <div v-for="(counter, index) in $store.state.counters" v-bind:key="index">
+    <div class="counter-list" v-for="(counter, index) in $store.state.counters" v-bind:key="index">
       <LifeCounter :counter="counter" />
     </div>
   </div>
@@ -21,13 +21,21 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
+  background-color: #000;
   font-family: 'Gugi', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
   position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 </style>
