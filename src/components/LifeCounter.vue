@@ -1,5 +1,5 @@
 <template>
-  <div class="life-counter">
+  <div v-bind:class="{ active: id % 2 != 0 }" class="life-counter">
     <button :id="counter.id" v-on:click="increment">+</button>
     <h1>{{ counter.count }}</h1>
     <button :id="counter.id" v-on:click="decrement">-</button>
@@ -11,7 +11,8 @@
 export default {
   name: 'LifeCounter',
   props: {
-    counter: Object
+    counter: Object,
+    id: String
   },
   methods: {
     increment: function (e) {
@@ -30,6 +31,11 @@ export default {
     border-radius: 8px;
     background-color: #333;
   }
+
+  .active {
+    transform: rotate(180deg)
+  }
+
   .life-counter button{
     border: none;
     background-color: transparent;

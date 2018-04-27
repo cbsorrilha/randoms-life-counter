@@ -1,8 +1,8 @@
 <template>
   <div id="app">
       <ResetButton />
-    <div class="counter-list" v-for="(counter, index) in $store.state.counters" v-bind:key="index">
-      <LifeCounter :counter="counter" />
+    <div v-for="(counter, index) in $store.state.counters" v-bind:key="index">
+      <LifeCounter :counter="counter" :id="index" />
     </div>
   </div>
 </template>
